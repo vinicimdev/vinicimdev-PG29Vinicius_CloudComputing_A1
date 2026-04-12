@@ -42,3 +42,13 @@ npm run dev
 
 ## Author
 Made by PG29 Vinicius Januzzi, @VFS 2025-2026
+
+## For Spencer (Or any VFS TA/Teacher)
+This is the admin user
+
+```bash
+username - pg29vinicius@vfs.com
+password - 123456
+```
+
+For the normal user, registration is working normally. Just create a new user with any email and password.
