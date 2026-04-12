@@ -1,16 +1,44 @@
-# React + Vite
+# SponderBird
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A totally cool game obviously not similar to Flappy Bird. Made with React + Firebase and Firestore
 
-Currently, two official plugins are available:
+## What this app does
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Authenticates users with Firebase
+- Creates and stores user profiles in Firestore
+- Displays separate screens for Admin and User roles
 
-## React Compiler
+## Setup
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+1. Install dependencies
 
-## Expanding the ESLint configuration
+```bash
+npm install
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+2. Create a `.env` file in the project root and add your Firebase keys
+
+```env
+VITE_FIREBASE_API_KEY=your_api_key
+VITE_FIREBASE_AUTH_DOMAIN=your_auth_domain
+VITE_FIREBASE_PROJECT_ID=your_project_id
+VITE_FIREBASE_STORAGE_BUCKET=your_storage_bucket
+VITE_FIREBASE_MESSAGING_SENDER_ID=your_messaging_sender_id
+VITE_FIREBASE_APP_ID=your_app_id
+VITE_GAME_URL=https://your-game-url.com
+```
+
+3. Run the app in dev mode
+
+```bash
+npm run dev
+```
+
+4. Open the app in the browser at the URL shown in the terminal
+
+## Notes
+
+- The game source is configured from `VITE_GAME_URL`
+
+## Author
+Made by PG29 Vinicius Januzzi, @VFS 2025-2026
