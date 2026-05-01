@@ -1,7 +1,7 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
-// https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
+  base: '/vinicimdev-PG29Vinicius_CloudComputing_A1/',  // ← coloca o nome exato do repo do site
 })

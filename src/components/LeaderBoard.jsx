@@ -9,7 +9,7 @@ export default function Leaderboard({ currentUserId }) {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        const q = query(collection(db, "users"), orderBy("highScore", "desc"),
+        const q = query(collection(db, "users"), orderBy("highscore", "desc"),
         limit(LEADERBOARD_LIMIT));
 
         const unsubscribe = onSnapshot(q, (snapshot) => {
@@ -62,9 +62,8 @@ export default function Leaderboard({ currentUserId }) {
                                 </div>
 
                                 <div className="leader-stats">
-                                    <span className="leader-score">{player.highScore ?? 0}</span>
-                                    <span className="leader-games">{player.gamesPlayed ?? 0}</span>
-                                </div>
+                                    <span className="leader-score">{player.highscore ?? 0}</span>
+                                    <span className="leader-games">{player.games ?? 0} games</span>                                </div>
                             </div>
                             
                         );

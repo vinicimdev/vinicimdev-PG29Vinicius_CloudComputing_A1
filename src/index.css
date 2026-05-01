@@ -21,14 +21,14 @@
 html, body { height: 100%; background: var(--bg); color: var(--text); font-family: 'Segoe UI', system-ui, sans-serif; }
 #root { min-height: 100vh; }
 
-/* ── LOADING ── */
+/* LOADING */
 .loading-screen { display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh; gap: 16px; color: var(--text2); }
 
-/* ── SPINNER ── */
+/* SPINNER */
 .spinner { width: 32px; height: 32px; border: 3px solid var(--bg3); border-top-color: var(--accent); border-radius: 50%; animation: spin 0.7s linear infinite; }
 @keyframes spin { to { transform: rotate(360deg); } }
 
-/* ── LOGIN ── */
+/* LOGIN */
 .login-container { min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 24px; background: radial-gradient(ellipse at 50% 0%, #1e1b4b 0%, var(--bg) 60%); }
 .login-card { background: var(--bg2); border: 1px solid var(--border); border-radius: var(--radius); padding: 40px 36px; width: 100%; max-width: 420px; box-shadow: var(--shadow); }
 .login-card h1 { font-size: 2rem; font-weight: 800; text-align: center; background: linear-gradient(135deg, var(--accent), #a855f7); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 4px; }
@@ -48,7 +48,7 @@ html, body { height: 100%; background: var(--bg); color: var(--text); font-famil
 .btn-google { display: flex; align-items: center; justify-content: center; gap: 10px; width: 100%; padding: 11px; background: var(--bg); border: 1px solid var(--border); color: var(--text); border-radius: 8px; font-size: 0.9rem; cursor: pointer; transition: background 0.2s; }
 .btn-google:hover { background: var(--bg3); }
 
-/* ── HEADER ── */
+/* HEADER */
 .app-header { display: flex; align-items: center; justify-content: space-between; padding: 12px 24px; background: var(--bg2); border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 100; }
 .header-brand { display: flex; align-items: center; gap: 10px; }
 .header-logo { font-size: 1.5rem; }
@@ -59,23 +59,34 @@ html, body { height: 100%; background: var(--bg); color: var(--text); font-famil
 .btn-signout:hover { background: var(--red); border-color: var(--red); color: #fff; }
 .admin-badge { background: var(--gold); color: #000; font-size: 0.7rem; font-weight: 800; padding: 2px 8px; border-radius: 4px; letter-spacing: 1px; }
 
-/* ── PROFILE BANNER ── */
+/* PROFILE BANNER */
 .profile-banner { display: flex; gap: 24px; padding: 20px 24px; background: linear-gradient(135deg, rgba(99,102,241,0.12), rgba(168,85,247,0.06)); border-bottom: 1px solid var(--border); flex-wrap: wrap; }
 .profile-stat { display: flex; flex-direction: column; gap: 2px; }
 .stat-label { font-size: 0.75rem; color: var(--text2); text-transform: uppercase; letter-spacing: 0.5px; }
 .stat-value { font-size: 1.4rem; font-weight: 700; color: var(--text); }
 .stat-value.gold { color: var(--gold); }
 
-/* ── TABS ── */
+/* TABS */
 .tab-nav { display: flex; gap: 4px; padding: 16px 24px 0; border-bottom: 1px solid var(--border); }
 .tab-btn { background: none; border: none; color: var(--text2); padding: 10px 20px; border-radius: 8px 8px 0 0; font-size: 0.9rem; cursor: pointer; font-weight: 500; border-bottom: 2px solid transparent; transition: all 0.2s; }
 .tab-btn:hover { color: var(--text); }
 .tab-btn.active { color: var(--accent); border-bottom-color: var(--accent); font-weight: 600; }
 .tab-content { padding: 24px; max-width: 960px; margin: 0 auto; width: 100%; }
 
-/* ── GAME AREA ── */
-.game-area { width: 100%; display: flex; justify-content: center; }
-.game-frame { width: 100%; min-height: 520px; border: none; border-radius: var(--radius); background: #000; }
+/* GAME AREA */
+.game-area {
+    width: 100%;
+    max-width: 1024px;
+    margin: 0 auto;
+}
+.game-frame {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    border: none;
+    border-radius: var(--radius);
+    background: #000;
+    display: block;
+}
 .game-placeholder { background: var(--bg2); border: 2px dashed var(--border); border-radius: var(--radius); padding: 60px 24px; text-align: center; }
 .placeholder-inner { display: flex; flex-direction: column; align-items: center; gap: 12px; }
 .placeholder-icon { font-size: 3rem; }
@@ -84,7 +95,7 @@ html, body { height: 100%; background: var(--bg); color: var(--text); font-famil
 .placeholder-inner code { background: var(--bg3); padding: 2px 6px; border-radius: 4px; font-family: monospace; font-size: 0.85rem; }
 .placeholder-hint { color: var(--accent); }
 
-/* ── LEADERBOARD ── */
+/* LEADERBOARD */
 .leaderboard-card { background: var(--bg2); border: 1px solid var(--border); border-radius: var(--radius); padding: 24px; }
 .card-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px; }
 .card-title { font-size: 1.15rem; font-weight: 700; }
@@ -102,7 +113,7 @@ html, body { height: 100%; background: var(--bg); color: var(--text); font-famil
 .leader-games { font-size: 0.78rem; color: var(--text2); }
 .leader-score { font-size: 1.3rem; font-weight: 800; color: var(--gold); }
 
-/* ── ADMIN SCREEN ── */
+/* ADMIN SCREEN */
 .admin-screen { min-height: 100vh; }
 .admin-stats-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 16px; padding: 24px; }
 .stat-card { background: var(--bg2); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; display: flex; align-items: center; gap: 14px; }
@@ -127,5 +138,44 @@ html, body { height: 100%; background: var(--bg); color: var(--text); font-famil
 .role-badge.admin { background: rgba(245,158,11,0.15); color: var(--gold); }
 .role-badge.player { background: rgba(99,102,241,0.12); color: var(--accent); }
 
-/* ── USER SCREEN ── */
+/* USER SCREEN */
 .user-screen { min-height: 100vh; display: flex; flex-direction: column; }
+
+.game-status {
+    padding: 8px 12px;
+    background: var(--bg2);
+    border-radius: 6px;
+    font-size: 0.85rem;
+    color: var(--text2);
+    margin-bottom: 12px;
+    display: inline-block;
+}
+
+.py-status {
+    padding: 10px 16px;
+    margin: 0 24px 16px;
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    font-size: 0.85rem;
+    color: var(--text2);
+}
+
+.app-shell { min-height: 100vh; display: flex; flex-direction: column; }
+
+.header-nav { display: flex; gap: 4px; flex: 1; justify-content: center; }
+.nav-btn {
+    background: none;
+    border: none;
+    color: var(--text2);
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.2s;
+}
+.nav-btn:hover { color: var(--text); background: rgba(255,255,255,0.04); }
+.nav-btn.active { color: var(--accent); background: rgba(99,102,241,0.12); font-weight: 600; }
+
+.admin-content { padding-top: 0; }
